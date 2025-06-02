@@ -230,14 +230,64 @@ printInvoiceBtn.addEventListener('click', () => {
 
   let invoiceWindow = window.open('', '', 'width=700,height=700');
   let invoiceHTML = `
-    <html>
-    <head>
-      <title>Invoice</title>
-      <style>
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #000; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-      </style>
+   <html>
+  <head>
+    <title>Invoice</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        color: #333;
+        background: #f9f9f9;
+      }
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      thead {
+        background-color: #2980b9;
+        color: #fff;
+      }
+      th, td {
+        padding: 12px 15px;
+        text-align: left;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f2f6fc;
+      }
+      tbody tr:hover {
+        background-color: #dbe9fb;
+      }
+      tfoot td {
+        font-weight: 700;
+        font-size: 1.1em;
+        border-top: 2px solid #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Invoice</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price (Rs.)</th>
+          <th>Quantity</th>
+          <th>Total (Rs.)</th>
+        </tr>
+      </thead>
+      <tbody>
     </head>
     <body>
       <h2>Invoice</h2>
