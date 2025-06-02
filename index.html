@@ -2,29 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple POS System</title>
+  <title>Smart POS System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="pos-container">
-    <h1>Simple POS System</h1>
+  <div class="container">
+    <h1>Smart POS System</h1>
 
-    <div class="products">
+    <!-- Search Bar -->
+    <input type="text" id="search" placeholder="Search Products..." />
+
+    <!-- Product Section -->
+    <section class="product-section">
       <h2>Products</h2>
-      <div class="product-list">
-        <div class="product" data-name="Milk" data-price="120">Milk - Rs.120</div>
-        <div class="product" data-name="Bread" data-price="80">Bread - Rs.80</div>
-        <div class="product" data-name="Eggs" data-price="150">Eggs - Rs.150</div>
-        <div class="product" data-name="Butter" data-price="200">Butter - Rs.200</div>
-      </div>
-    </div>
+      <div id="product-list" class="product-list"></div>
+    </section>
 
-    <div class="cart">
+    <!-- Cart Section -->
+    <section class="cart-section">
       <h2>Cart</h2>
       <ul id="cart-items"></ul>
       <p>Total: Rs. <span id="total">0</span></p>
       <button id="checkout">Checkout</button>
-    </div>
+      <button id="print-invoice">Print Invoice</button>
+    </section>
+
+    <!-- Admin Panel -->
+    <section class="admin-section">
+      <h2>Add New Product</h2>
+      <form id="add-product-form">
+        <input type="text" id="new-product-name" placeholder="Product Name" required>
+        <input type="number" id="new-product-price" placeholder="Price (Rs)" required>
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
   </div>
 
   <script src="script.js"></script>
