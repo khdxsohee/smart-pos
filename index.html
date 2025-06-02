@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <div class="container">
     <h1>Smart POS System</h1>
 
@@ -30,13 +31,16 @@
     <!-- Admin Panel -->
     <section class="admin-section">
       <h2>Add New Product</h2>
-      <form id="add-product-form">
-        <input type="text" id="new-product-name" placeholder="Product Name" required>
-        <input type="number" id="new-product-price" placeholder="Price (Rs)" required>
-        <button type="submit">Add Product</button>
-      </form>
+     <form id="add-product-form">
+  <input type="text" id="new-product-name" placeholder="Product Name" required>
+  <input type="number" id="new-product-price" placeholder="Price (Rs)" required>
+  <input type="number" id="new-product-stock" placeholder="Stock Quantity" required min="0" step="1">
+  <button type="submit">Add Product</button>
+</form>
+
     </section>
   </div>
+<!-- Add New Product form mein stock quantity ka input add karein -->
 
   <script src="script.js"></script>
 </body>
